@@ -1,0 +1,1309 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Fri Feb 25 2022 22:47:15 GMT+0530 (India Standard Time)]  JsonWebTokenError: jwt malformed
+    at Object.module.exports [as verify] (D:\retail\application\node_modules\jsonwebtoken\verify.js:63:17)
+    at D:\retail\application\functions\LoginFunctions.js:116:35
+    at new Promise (<anonymous>)
+    at Function.GetIDFromToken (D:\retail\application\functions\LoginFunctions.js:114:16)
+    at D:\retail\application\routes\UserRoute.js:134:40
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+error [Fri Feb 25 2022 22:51:35 GMT+0530 (India Standard Time)]  Error: Table 'pos8.item_by_group' doesn't exist
+    at PromisePoolConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\ItemManage.js:163:47
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sql: 'select * from item_by_group',
+  sqlState: '42S02',
+  sqlMessage: "Table 'pos8.item_by_group' doesn't exist"
+}
+error [Fri Feb 25 2022 22:52:31 GMT+0530 (India Standard Time)]  Error: Table 'pos8.item_by_group' doesn't exist
+    at PromisePoolConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\ItemManage.js:163:47
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sql: 'select * from item_by_group',
+  sqlState: '42S02',
+  sqlMessage: "Table 'pos8.item_by_group' doesn't exist"
+}
+error [Fri Feb 25 2022 22:53:05 GMT+0530 (India Standard Time)]  Error: Table 'pos8.item_by_group' doesn't exist
+    at PromisePoolConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\ItemManage.js:163:47
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sql: 'select * from item_by_group',
+  sqlState: '42S02',
+  sqlMessage: "Table 'pos8.item_by_group' doesn't exist"
+}
+error [Fri Feb 25 2022 22:54:04 GMT+0530 (India Standard Time)]  Error: Table 'pos8.item_by_group' doesn't exist
+    at PromisePoolConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\ItemManage.js:163:47
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ER_NO_SUCH_TABLE',
+  errno: 1146,
+  sql: 'select * from item_by_group',
+  sqlState: '42S02',
+  sqlMessage: "Table 'pos8.item_by_group' doesn't exist"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Sat Feb 26 2022 10:46:06 GMT+0530 (India Standard Time)]  TokenExpiredError: jwt expired
+    at D:\retail\application\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (D:\retail\application\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\retail\application\node_modules\jsonwebtoken\verify.js:94:10)
+    at D:\retail\application\functions\LoginFunctions.js:116:35
+    at new Promise (<anonymous>)
+    at Function.GetIDFromToken (D:\retail\application\functions\LoginFunctions.js:114:16)
+    at D:\retail\application\routes\UserRoute.js:134:40
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  expiredAt: 2022-02-26T05:14:20.000Z
+}
+error [Sat Feb 26 2022 10:46:11 GMT+0530 (India Standard Time)]  TokenExpiredError: jwt expired
+    at D:\retail\application\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (D:\retail\application\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\retail\application\node_modules\jsonwebtoken\verify.js:94:10)
+    at D:\retail\application\functions\LoginFunctions.js:116:35
+    at new Promise (<anonymous>)
+    at Function.GetIDFromToken (D:\retail\application\functions\LoginFunctions.js:114:16)
+    at D:\retail\application\routes\UserRoute.js:134:40
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  expiredAt: 2022-02-26T05:14:20.000Z
+}
+error [Sat Feb 26 2022 10:46:14 GMT+0530 (India Standard Time)]  TokenExpiredError: jwt expired
+    at D:\retail\application\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (D:\retail\application\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\retail\application\node_modules\jsonwebtoken\verify.js:94:10)
+    at D:\retail\application\functions\LoginFunctions.js:116:35
+    at new Promise (<anonymous>)
+    at Function.GetIDFromToken (D:\retail\application\functions\LoginFunctions.js:114:16)
+    at D:\retail\application\routes\UserRoute.js:134:40
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  expiredAt: 2022-02-26T05:14:20.000Z
+}
+error [Sat Feb 26 2022 10:48:59 GMT+0530 (India Standard Time)]  Error: Unknown column 'incid' in 'order clause'
+    at PromiseConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\ReportRoute.js:17:46
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sql: "select * from bin_card where type = 'GRN' || type = 'CREATE' order by incid desc limit 1",
+  sqlState: '42S22',
+  sqlMessage: "Unknown column 'incid' in 'order clause'"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Sat Feb 26 2022 11:05:07 GMT+0530 (India Standard Time)]  Error: Unknown column 'incid' in 'order clause'
+    at PromiseConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\ReportRoute.js:17:46
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sql: "select * from bin_card where type = 'GRN' || type = 'CREATE' order by incid desc limit 1",
+  sqlState: '42S22',
+  sqlMessage: "Unknown column 'incid' in 'order clause'"
+}
+error [Sat Feb 26 2022 11:05:12 GMT+0530 (India Standard Time)]  Error: Unknown column 'incid' in 'order clause'
+    at PromiseConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\ReportRoute.js:17:46
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sql: "select * from bin_card where type = 'GRN' || type = 'CREATE' order by incid desc limit 1",
+  sqlState: '42S22',
+  sqlMessage: "Unknown column 'incid' in 'order clause'"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Sat Feb 26 2022 11:07:15 GMT+0530 (India Standard Time)]  Error: Unknown column 'incid' in 'order clause'
+    at PromiseConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\ReportRoute.js:17:46
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sql: "select * from bin_card where type = 'GRN' || type = 'CREATE' order by incid desc limit 1",
+  sqlState: '42S22',
+  sqlMessage: "Unknown column 'incid' in 'order clause'"
+}
+error [Sat Feb 26 2022 16:47:11 GMT+0530 (India Standard Time)]  Error: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received an instance of Promise
+    at PromisePoolConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\OrderRoute.js:15:48
+    at runMicrotasks (<anonymous>)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ERR_INVALID_ARG_TYPE',
+  errno: undefined,
+  sql: undefined,
+  sqlState: undefined,
+  sqlMessage: undefined
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Sat Feb 26 2022 16:52:47 GMT+0530 (India Standard Time)]  Error: Unknown column 'quantitiy' in 'field list'
+    at PromisePoolConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\OrderRoute.js:21:30
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sql: 'insert into purchase_order_items (item,document,unitprice,quantitiy,discount,total,final) values (?,?,?,?,?,?,?)',
+  sqlState: '42S22',
+  sqlMessage: "Unknown column 'quantitiy' in 'field list'"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Sat Feb 26 2022 16:54:00 GMT+0530 (India Standard Time)]  Error: Field 'sucess' doesn't have a default value
+    at PromisePoolConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\OrderRoute.js:21:30
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ER_NO_DEFAULT_FOR_FIELD',
+  errno: 1364,
+  sql: 'insert into purchase_order_items (item,document,unitprice,quantity,discount,total,final) values (?,?,?,?,?,?,?)',
+  sqlState: 'HY000',
+  sqlMessage: "Field 'sucess' doesn't have a default value"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Sat Feb 26 2022 16:55:21 GMT+0530 (India Standard Time)]  Error: Malformed communication packet.
+    at PromisePoolConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\OrderRoute.js:21:30
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ER_MALFORMED_PACKET',
+  errno: 1835,
+  sql: 'insert into purchase_order_items (item,document,unitprice,quantity,discount,total,final,sucess) values (?,?,?,?,?,?,?,?)',
+  sqlState: 'HY000',
+  sqlMessage: 'Malformed communication packet.'
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Sat Feb 26 2022 16:56:00 GMT+0530 (India Standard Time)]  Error: Malformed communication packet.
+    at PromisePoolConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\OrderRoute.js:21:30
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ER_MALFORMED_PACKET',
+  errno: 1835,
+  sql: 'insert into purchase_order_items (item,document,unitprice,quantity,discount,total,final,sucess) values (?,?,?,?,?,?,?,?)',
+  sqlState: 'HY000',
+  sqlMessage: 'Malformed communication packet.'
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Sat Feb 26 2022 17:03:22 GMT+0530 (India Standard Time)]  Error: Malformed communication packet.
+    at PromisePoolConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\OrderRoute.js:21:30
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ER_MALFORMED_PACKET',
+  errno: 1835,
+  sql: 'insert into purchase_order_items (item,document,unitprice,quantity,discount,total,final,sucess) values (?,?,?,?,?,?,?,?)',
+  sqlState: 'HY000',
+  sqlMessage: 'Malformed communication packet.'
+}
+error [Sat Feb 26 2022 17:03:29 GMT+0530 (India Standard Time)]  Error: Malformed communication packet.
+    at PromisePoolConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\OrderRoute.js:21:30
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ER_MALFORMED_PACKET',
+  errno: 1835,
+  sql: 'insert into purchase_order_items (item,document,unitprice,quantity,discount,total,final,sucess) values (?,?,?,?,?,?,?,?)',
+  sqlState: 'HY000',
+  sqlMessage: 'Malformed communication packet.'
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Sat Feb 26 2022 17:03:56 GMT+0530 (India Standard Time)]  TypeError: Cannot set property 'items' of undefined
+    at D:\retail\application\routes\OrderRoute.js:53:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+error [Sat Feb 26 2022 17:09:24 GMT+0530 (India Standard Time)]  TypeError: Cannot set property 'items' of undefined
+    at D:\retail\application\routes\OrderRoute.js:53:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+error [Sat Feb 26 2022 17:10:58 GMT+0530 (India Standard Time)]  TypeError: Cannot set property 'items' of undefined
+    at D:\retail\application\routes\OrderRoute.js:53:29
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+error [Sat Feb 26 2022 17:20:37 GMT+0530 (India Standard Time)]  Error: Unknown column 'quantitiy' in 'where clause'
+    at PromisePoolConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\OrderRoute.js:91:47
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sql: 'select purchase_order.*,stakeholders.id as st_id,stakeholders.name,stakeholders.address1,stakeholders.address2,stakeholders.address3,stakeholders.email,stakeholders.telephone from  purchase_order,stakeholders where stakeholders.id = purchase_order.stake and purchase_order.id in (select document from purchase_order_items where quantitiy > success)',
+  sqlState: '42S22',
+  sqlMessage: "Unknown column 'quantitiy' in 'where clause'"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Sat Feb 26 2022 17:24:20 GMT+0530 (India Standard Time)]  Error: Unknown column 'success' in 'where clause'
+    at PromisePoolConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\OrderRoute.js:91:47
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sql: 'select purchase_order.*,stakeholders.id as st_id,stakeholders.name,stakeholders.address1,stakeholders.address2,stakeholders.address3,stakeholders.email,stakeholders.telephone from  purchase_order,stakeholders where stakeholders.id = purchase_order.stake and purchase_order.id in (select document from purchase_order_items where quantity > success)',
+  sqlState: '42S22',
+  sqlMessage: "Unknown column 'success' in 'where clause'"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Sat Feb 26 2022 17:28:09 GMT+0530 (India Standard Time)]  Error: Unknown column 'success' in 'field list'
+    at PromisePoolConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\DocumentationRoute.js:126:34
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sql: 'Update purchase_order_items set success = success + ? where item = ? && document = ?',
+  sqlState: '42S22',
+  sqlMessage: "Unknown column 'success' in 'field list'"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Sat Feb 26 2022 17:34:48 GMT+0530 (India Standard Time)]  Error: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received an instance of Promise
+    at PromisePoolConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\InvoiceRoute.js:113:38
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ERR_INVALID_ARG_TYPE',
+  errno: undefined,
+  sql: undefined,
+  sqlState: undefined,
+  sqlMessage: undefined
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Sat Feb 26 2022 17:41:44 GMT+0530 (India Standard Time)]  Error: The first argument must be of type string or an instance of Buffer, ArrayBuffer, or Array or an Array-like Object. Received an instance of Promise
+    at PromisePoolConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\ItemReturnRoute.js:14:48
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ERR_INVALID_ARG_TYPE',
+  errno: undefined,
+  sql: undefined,
+  sqlState: undefined,
+  sqlMessage: undefined
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Sat Feb 26 2022 17:52:11 GMT+0530 (India Standard Time)]  Error: Unknown column 'incid' in 'order clause'
+    at PromiseConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\ReportRoute.js:17:46
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sql: "select * from bin_card where type = 'GRN' || type = 'CREATE' order by incid desc limit 1",
+  sqlState: '42S22',
+  sqlMessage: "Unknown column 'incid' in 'order clause'"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Sat Feb 26 2022 18:01:14 GMT+0530 (India Standard Time)]  Error: Field 'type' doesn't have a default value
+    at PromisePoolConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\PettyCashRoute.js:83:26
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ER_NO_DEFAULT_FOR_FIELD',
+  errno: 1364,
+  sql: "insert into petty_book (transaction_type,account,reason,amount,remarks,settle) values ('IN',?,?,?,?,?)",
+  sqlState: 'HY000',
+  sqlMessage: "Field 'type' doesn't have a default value"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Sat Feb 26 2022 18:16:12 GMT+0530 (India Standard Time)]  Error: Unknown column 'cat' in 'field list'
+    at PromiseConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\ReportRoute.js:51:44
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sql: "insert into stc_doc(cat,sub_cat,date_begin)values(2,0,'2022-02-19')",
+  sqlState: '42S22',
+  sqlMessage: "Unknown column 'cat' in 'field list'"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Sat Feb 26 2022 18:17:27 GMT+0530 (India Standard Time)]  ReferenceError: sys_qty is not defined
+    at D:\retail\application\routes\ReportRoute.js:69:99
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Sat Feb 26 2022 18:19:36 GMT+0530 (India Standard Time)]  Error: Unknown column 'undefined' in 'field list'
+    at PromiseConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\ReportRoute.js:73:30
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sql: "insert into stc_doc_items (item,document,unit_price,avg_price,last_system,item_status) values (undefined,2,null,NaN,null,'null') ",
+  sqlState: '42S22',
+  sqlMessage: "Unknown column 'undefined' in 'field list'"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Sat Feb 26 2022 18:20:39 GMT+0530 (India Standard Time)]  Error: Unknown column 'undefined' in 'field list'
+    at PromiseConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\ReportRoute.js:73:30
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sql: "insert into stc_doc_items (item,document,unit_price,avg_price,last_system,item_status) values (undefined,3,null,NaN,null,'null') ",
+  sqlState: '42S22',
+  sqlMessage: "Unknown column 'undefined' in 'field list'"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Sat Feb 26 2022 18:22:23 GMT+0530 (India Standard Time)]  Error: Unknown column 'undefined' in 'field list'
+    at PromiseConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\ReportRoute.js:75:30
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sql: "insert into stc_doc_items (item,document,unit_price,avg_price,last_system,item_status) values (undefined,4,null,NaN,null,'null') ",
+  sqlState: '42S22',
+  sqlMessage: "Unknown column 'undefined' in 'field list'"
+}
+error [Sat Feb 26 2022 18:22:48 GMT+0530 (India Standard Time)]  Error: Unknown column 'undefined' in 'field list'
+    at PromiseConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\ReportRoute.js:75:30
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sql: "insert into stc_doc_items (item,document,unit_price,avg_price,last_system,item_status) values (undefined,5,2000.00,1653.8461538461538,1300.000,'ACTIVE') ",
+  sqlState: '42S22',
+  sqlMessage: "Unknown column 'undefined' in 'field list'"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Sat Feb 26 2022 18:29:09 GMT+0530 (India Standard Time)]  Error: Unknown column 'NaN' in 'field list'
+    at PromiseConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\ReportRoute.js:75:30
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sql: "insert into stc_doc_items (item,document,unit_price,avg_price,last_system,item_status) values (null,6,null,NaN,null,'null') ",
+  sqlState: '42S22',
+  sqlMessage: "Unknown column 'NaN' in 'field list'"
+}
+error [Sat Feb 26 2022 18:29:22 GMT+0530 (India Standard Time)]  Error: Unknown column 'NaN' in 'field list'
+    at PromiseConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\ReportRoute.js:75:30
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ER_BAD_FIELD_ERROR',
+  errno: 1054,
+  sql: "insert into stc_doc_items (item,document,unit_price,avg_price,last_system,item_status) values (null,7,null,NaN,null,'null') ",
+  sqlState: '42S22',
+  sqlMessage: "Unknown column 'NaN' in 'field list'"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Sat Feb 26 2022 22:10:58 GMT+0530 (India Standard Time)]  Error: Field 'type' doesn't have a default value
+    at PromisePoolConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\PettyCashRoute.js:83:26
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ER_NO_DEFAULT_FOR_FIELD',
+  errno: 1364,
+  sql: "insert into petty_book (transaction_type,account,reason,amount,remarks,settle) values ('IN',?,?,?,?,?)",
+  sqlState: 'HY000',
+  sqlMessage: "Field 'type' doesn't have a default value"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Sun Feb 27 2022 08:45:09 GMT+0530 (India Standard Time)]  TokenExpiredError: jwt expired
+    at D:\retail\application\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (D:\retail\application\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\retail\application\node_modules\jsonwebtoken\verify.js:94:10)
+    at D:\retail\application\functions\LoginFunctions.js:116:35
+    at new Promise (<anonymous>)
+    at Function.GetIDFromToken (D:\retail\application\functions\LoginFunctions.js:114:16)
+    at D:\retail\application\routes\UserRoute.js:134:40
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  expiredAt: 2022-02-26T22:45:32.000Z
+}
+error [Sun Feb 27 2022 08:45:09 GMT+0530 (India Standard Time)]  TokenExpiredError: jwt expired
+    at D:\retail\application\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (D:\retail\application\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\retail\application\node_modules\jsonwebtoken\verify.js:94:10)
+    at D:\retail\application\functions\LoginFunctions.js:116:35
+    at new Promise (<anonymous>)
+    at Function.GetIDFromToken (D:\retail\application\functions\LoginFunctions.js:114:16)
+    at D:\retail\application\routes\UserRoute.js:36:39
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  expiredAt: 2022-02-26T22:45:32.000Z
+}
+info [Sun Feb 27 2022 08:45:41 GMT+0530 (India Standard Time)]  [ 'Insertion of Items are successful', 'Item List.csv' ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Sun Feb 27 2022 09:25:55 GMT+0530 (India Standard Time)]  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'items.type = 2 group by bin_card.item' at line 1
+    at PromiseConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\ReportRoute.js:63:58
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ER_PARSE_ERROR',
+  errno: 1064,
+  sql: 'select items.id,items.price,items.sttatus,sum(bin_card.in_quantity - bin_card.out_quantity) as sys_qty,sum(bin_card.in_total - bin_card.out_total) as sys_total_cost from items,bin_card where items.rep_block = 0 && bin_card.item = items.id items.type = 2 group by bin_card.item',
+  sqlState: '42000',
+  sqlMessage: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'items.type = 2 group by bin_card.item' at line 1"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+info [Sun Feb 27 2022 09:31:12 GMT+0530 (India Standard Time)]  [ 'Done success!' ]
+error [Sun Feb 27 2022 09:33:40 GMT+0530 (India Standard Time)]  Error: Truncated incorrect DOUBLE value: 'ACTIVE'
+    at PromiseConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\ReportRoute.js:186:34
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ER_TRUNCATED_WRONG_VALUE',
+  errno: 1292,
+  sql: 'update items set sttatus = ? && rep_block = 0 where id = ?',
+  sqlState: '22007',
+  sqlMessage: "Truncated incorrect DOUBLE value: 'ACTIVE'"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Sun Feb 27 2022 10:03:11 GMT+0530 (India Standard Time)]  Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'rep_block = 0 where id = ?' at line 1
+    at PromiseConnection.execute (D:\retail\application\node_modules\mysql2\promise.js:111:22)
+    at D:\retail\application\routes\ReportRoute.js:187:38
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  code: 'ER_PARSE_ERROR',
+  errno: 1064,
+  sql: 'update items set quantity = quantity - ?,sttatus = ? rep_block = 0 where id = ?',
+  sqlState: '42000',
+  sqlMessage: "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'rep_block = 0 where id = ?' at line 1"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Sat Mar 05 2022 07:18:10 GMT+0530 (India Standard Time)]  Error: connect ETIMEDOUT
+    at PoolConnection._handleTimeoutError (D:\retail\application\node_modules\mysql2\lib\connection.js:189:17)
+    at listOnTimeout (node:internal/timers:557:17)
+    at processTimers (node:internal/timers:500:7) {
+  errorno: 'ETIMEDOUT',
+  code: 'ETIMEDOUT',
+  syscall: 'connect',
+  fatal: true
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Wed Mar 23 2022 10:42:55 GMT+0530 (India Standard Time)]  TokenExpiredError: jwt expired
+    at D:\retail\application\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (D:\retail\application\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\retail\application\node_modules\jsonwebtoken\verify.js:94:10)
+    at D:\retail\application\functions\LoginFunctions.js:116:35
+    at new Promise (<anonymous>)
+    at Function.GetIDFromToken (D:\retail\application\functions\LoginFunctions.js:114:16)
+    at D:\retail\application\routes\UserRoute.js:134:40
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  expiredAt: 2022-03-05T13:49:25.000Z
+}
+error [Wed Mar 23 2022 10:42:55 GMT+0530 (India Standard Time)]  TokenExpiredError: jwt expired
+    at D:\retail\application\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (D:\retail\application\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\retail\application\node_modules\jsonwebtoken\verify.js:94:10)
+    at D:\retail\application\functions\LoginFunctions.js:116:35
+    at new Promise (<anonymous>)
+    at Function.GetIDFromToken (D:\retail\application\functions\LoginFunctions.js:114:16)
+    at D:\retail\application\routes\UserRoute.js:36:39
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  expiredAt: 2022-03-05T13:49:25.000Z
+}
+error [Wed Mar 23 2022 10:51:17 GMT+0530 (India Standard Time)]  TokenExpiredError: jwt expired
+    at D:\retail\application\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (D:\retail\application\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\retail\application\node_modules\jsonwebtoken\verify.js:94:10)
+    at D:\retail\application\functions\LoginFunctions.js:116:35
+    at new Promise (<anonymous>)
+    at Function.GetIDFromToken (D:\retail\application\functions\LoginFunctions.js:114:16)
+    at D:\retail\application\routes\UserRoute.js:134:40
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  expiredAt: 2022-03-05T14:19:06.000Z
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Fri Mar 25 2022 09:27:35 GMT+0530 (India Standard Time)]  TokenExpiredError: jwt expired
+    at D:\retail\application\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (D:\retail\application\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\retail\application\node_modules\jsonwebtoken\verify.js:94:10)
+    at D:\retail\application\functions\LoginFunctions.js:116:35
+    at new Promise (<anonymous>)
+    at Function.GetIDFromToken (D:\retail\application\functions\LoginFunctions.js:114:16)
+    at D:\retail\application\routes\UserRoute.js:36:39
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  expiredAt: 2022-03-23T17:13:25.000Z
+}
+error [Fri Mar 25 2022 09:27:36 GMT+0530 (India Standard Time)]  TokenExpiredError: jwt expired
+    at D:\retail\application\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (D:\retail\application\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\retail\application\node_modules\jsonwebtoken\verify.js:94:10)
+    at D:\retail\application\functions\LoginFunctions.js:116:35
+    at new Promise (<anonymous>)
+    at Function.GetIDFromToken (D:\retail\application\functions\LoginFunctions.js:114:16)
+    at D:\retail\application\routes\UserRoute.js:134:40
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  expiredAt: 2022-03-23T17:13:25.000Z
+}
+error [Fri Mar 25 2022 10:00:17 GMT+0530 (India Standard Time)]  TokenExpiredError: jwt expired
+    at D:\retail\application\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (D:\retail\application\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\retail\application\node_modules\jsonwebtoken\verify.js:94:10)
+    at D:\retail\application\functions\LoginFunctions.js:116:35
+    at new Promise (<anonymous>)
+    at Function.GetIDFromToken (D:\retail\application\functions\LoginFunctions.js:114:16)
+    at D:\retail\application\routes\UserRoute.js:134:40
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  expiredAt: 2022-03-23T17:22:01.000Z
+}
+error [Fri Mar 25 2022 10:00:32 GMT+0530 (India Standard Time)]  TokenExpiredError: jwt expired
+    at D:\retail\application\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (D:\retail\application\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\retail\application\node_modules\jsonwebtoken\verify.js:94:10)
+    at D:\retail\application\functions\LoginFunctions.js:116:35
+    at new Promise (<anonymous>)
+    at Function.GetIDFromToken (D:\retail\application\functions\LoginFunctions.js:114:16)
+    at D:\retail\application\routes\UserRoute.js:134:40
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  expiredAt: 2022-03-23T17:22:01.000Z
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Sat Mar 26 2022 23:46:41 GMT+0530 (India Standard Time)]  TokenExpiredError: jwt expired
+    at D:\retail\application\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (D:\retail\application\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\retail\application\node_modules\jsonwebtoken\verify.js:94:10)
+    at D:\retail\application\functions\LoginFunctions.js:116:35
+    at new Promise (<anonymous>)
+    at Function.GetIDFromToken (D:\retail\application\functions\LoginFunctions.js:114:16)
+    at D:\retail\application\routes\UserRoute.js:134:40
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  expiredAt: 2022-03-20T21:42:06.000Z
+}
+error [Sat Mar 26 2022 23:46:41 GMT+0530 (India Standard Time)]  TokenExpiredError: jwt expired
+    at D:\retail\application\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (D:\retail\application\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\retail\application\node_modules\jsonwebtoken\verify.js:94:10)
+    at D:\retail\application\functions\LoginFunctions.js:116:35
+    at new Promise (<anonymous>)
+    at Function.GetIDFromToken (D:\retail\application\functions\LoginFunctions.js:114:16)
+    at D:\retail\application\routes\UserRoute.js:36:39
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  expiredAt: 2022-03-20T21:42:06.000Z
+}
+error [Sat Mar 26 2022 23:46:48 GMT+0530 (India Standard Time)]  TokenExpiredError: jwt expired
+    at D:\retail\application\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (D:\retail\application\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\retail\application\node_modules\jsonwebtoken\verify.js:94:10)
+    at D:\retail\application\functions\LoginFunctions.js:116:35
+    at new Promise (<anonymous>)
+    at Function.GetIDFromToken (D:\retail\application\functions\LoginFunctions.js:114:16)
+    at D:\retail\application\routes\UserRoute.js:36:39
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  expiredAt: 2022-03-20T21:42:06.000Z
+}
+error [Sat Mar 26 2022 23:46:48 GMT+0530 (India Standard Time)]  TokenExpiredError: jwt expired
+    at D:\retail\application\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (D:\retail\application\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\retail\application\node_modules\jsonwebtoken\verify.js:94:10)
+    at D:\retail\application\functions\LoginFunctions.js:116:35
+    at new Promise (<anonymous>)
+    at Function.GetIDFromToken (D:\retail\application\functions\LoginFunctions.js:114:16)
+    at D:\retail\application\routes\UserRoute.js:134:40
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  expiredAt: 2022-03-20T21:42:06.000Z
+}
+error [Sat Mar 26 2022 23:46:49 GMT+0530 (India Standard Time)]  TokenExpiredError: jwt expired
+    at D:\retail\application\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (D:\retail\application\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\retail\application\node_modules\jsonwebtoken\verify.js:94:10)
+    at D:\retail\application\functions\LoginFunctions.js:116:35
+    at new Promise (<anonymous>)
+    at Function.GetIDFromToken (D:\retail\application\functions\LoginFunctions.js:114:16)
+    at D:\retail\application\routes\UserRoute.js:134:40
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  expiredAt: 2022-03-20T21:42:06.000Z
+}
+error [Sat Mar 26 2022 23:46:49 GMT+0530 (India Standard Time)]  TokenExpiredError: jwt expired
+    at D:\retail\application\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (D:\retail\application\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\retail\application\node_modules\jsonwebtoken\verify.js:94:10)
+    at D:\retail\application\functions\LoginFunctions.js:116:35
+    at new Promise (<anonymous>)
+    at Function.GetIDFromToken (D:\retail\application\functions\LoginFunctions.js:114:16)
+    at D:\retail\application\routes\UserRoute.js:36:39
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  expiredAt: 2022-03-20T21:42:06.000Z
+}
+error [Sat Mar 26 2022 23:46:50 GMT+0530 (India Standard Time)]  TokenExpiredError: jwt expired
+    at D:\retail\application\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (D:\retail\application\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\retail\application\node_modules\jsonwebtoken\verify.js:94:10)
+    at D:\retail\application\functions\LoginFunctions.js:116:35
+    at new Promise (<anonymous>)
+    at Function.GetIDFromToken (D:\retail\application\functions\LoginFunctions.js:114:16)
+    at D:\retail\application\routes\UserRoute.js:36:39
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  expiredAt: 2022-03-20T21:42:06.000Z
+}
+error [Sat Mar 26 2022 23:46:50 GMT+0530 (India Standard Time)]  TokenExpiredError: jwt expired
+    at D:\retail\application\node_modules\jsonwebtoken\verify.js:152:21
+    at getSecret (D:\retail\application\node_modules\jsonwebtoken\verify.js:90:14)
+    at Object.module.exports [as verify] (D:\retail\application\node_modules\jsonwebtoken\verify.js:94:10)
+    at D:\retail\application\functions\LoginFunctions.js:116:35
+    at new Promise (<anonymous>)
+    at Function.GetIDFromToken (D:\retail\application\functions\LoginFunctions.js:114:16)
+    at D:\retail\application\routes\UserRoute.js:134:40
+    at processTicksAndRejections (node:internal/process/task_queues:96:5) {
+  expiredAt: 2022-03-20T21:42:06.000Z
+}

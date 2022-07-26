@@ -1,0 +1,217 @@
+/**
+ * @param { import("knex").Knex } knex
+ * @returns { Promise<void> }
+ */
+exports.up = function(knex) {
+  return knex.schema
+  .createTable("purchase_order",function (table) {
+      table.increments("id").notNullable().primary();
+      table.integer("stake").unsigned().references("id").inTable("stakeholders");
+      table.date("required");
+      table.date("requested");
+      table.text("reference");
+      table.text("delivery");
+      table.text("payment_term");
+      table.decimal("total",18,2).notNullable();
+      table.string("discount",20);
+      table.string("vat_percentage",4);
+      table.decimal("discount_am",18,2).notNullable().defaultTo(0.00);
+      table.decimal("vat_am",18,2).notNullable().defaultTo(0.00);
+      table.decimal("final",18,2).notNullable();
+      table.text("remarks");
+      table.integer("uid").unsigned().notNullable().references("id").inTable("users");
+      table.string("type",8).notNullable();
+  })
+  .createTable("purchase_order_items",function(table){
+      table.increments("id").notNullable().primary();
+      table.integer("item").notNullable().unsigned().references("id").inTable("items");
+      table.integer("document").notNullable().unsigned().references("id").inTable("purchase_order");
+      table.decimal("unitprice",18,2).notNullable();
+      table.decimal("quantity",18,3).notNullable();
+      table.string("discount",20);
+      table.decimal("total",18,2).notNullable();
+      table.decimal("final",18,2).notNullable();
+      table.decimal("sucess",18,2).notNullable().defaultTo(0.00);
+  })
+  .createTable("grn",function(table){
+      table.increments("id").notNullable().primary();
+      table.date("rec_date");
+      table.date("ent_date");
+      table.integer("orders").unsigned().references("id").inTable("purchase_order");
+      table.string("type",100);
+      table.integer("stakeholder").unsigned().references("id").inTable("stakeholders");
+      table.string("invoice",50).notNullable();
+      table.string("reference",200).notNullable();
+      table.string("payment_term",200).notNullable();
+      table.decimal("total",18,2).notNullable().defaultTo(0.00);
+      table.string("vat_percentage",4);
+      table.string("discount",4);
+      table.decimal("vat_amount",18,2).notNullable().defaultTo(0.00);
+      table.decimal("disc_amount",18,2).notNullable().defaultTo(0.00);
+      table.decimal("final",18,2).notNullable().defaultTo(0.00);
+      table.text("remarks");
+      table.decimal("paid",18,2).notNullable().defaultTo(0.00);
+      table.integer("user").unsigned().notNullable().references("id").inTable("users");
+  })
+  .createTable("grn_advance",function(table){
+      table.integer("grn_id").unsigned().notNullable().references("id").inTable("grn");
+      table.integer("advance_id").unsigned().notNullable().references("id").inTable("advances");
+      table.decimal("amount",18,2).notNullable();
+  })
+  .createTable("grn_items",function(table){
+      table.integer("item").unsigned().notNullable().references("id").inTable("items");
+      table.integer("document").unsigned().notNullable().references("id").inTable("grn");
+      table.decimal("quantity",18,2).notNullable();
+      table.decimal("unit_price",18,2).notNullable();
+      table.string("discount",100).notNullable();
+      table.decimal("total",18,2).notNullable();
+      table.decimal("final",18,2).notNullable();
+  })
+  .createTable("grn_return_note",function(table){
+      table.increments("id").notNullable().primary();
+      table.string("code",30).notNullable();
+      table.date("date");
+      table.date("returned_date");
+      table.integer("grn").notNullable().unsigned().references("id").inTable("grn");
+      table.decimal("total",18,2).notNullable();
+      table.string("discount_percentage",4);
+      table.string("vat_percentage",4);
+      table.decimal("final",18,2).notNullable().defaultTo(0.00);
+      table.decimal("completed",18,2).notNullable().defaultTo(0.00);
+      table.text("remarks");
+      table.decimal("discounted_amount",18,2).notNullable().defaultTo(0.00);
+      table.decimal("vat_amount",18,2).notNullable().defaultTo(0.00)
+  })
+  .createTable("grn_returned_items",function(table){
+      table.integer("item").unsigned().notNullable().references("id").inTable("items");
+      table.decimal("quantity",18,3).notNullable();
+      table.decimal("unit_price",18,2).notNullable();
+      table.decimal("total",18,2).notNullable();
+      table.string("discount",20).notNullable();
+      table.decimal("final",18,2).notNullable();
+      table.integer("document").notNullable().unsigned().references("id").inTable("grn_return_note");
+  })
+  .createTable("grn_trans",function(tables){
+      tables.integer("grn").unsigned().notNullable().references("id").inTable("grn");
+      tables.integer("transaction").unsigned().notNullable().references("id").inTable("transactions");
+      tables.date("date").notNullable();
+  })
+  .createTable("item_requests",function(table){
+      table.increments("id").notNullable().primary();
+      table.date("reqdate").notNullable();
+      table.integer("customer").unsigned().notNullable().references("id").inTable("stakeholders");
+      table.string("reference",50).nullable();
+      table.string("cusref",50).nullable();
+      table.decimal("total",18,2).notNullable();
+      table.string("discount",50).notNullable();
+      table.decimal("final",18,2).notNullable();
+      table.text("remarks").nullable();
+      table.integer("cby").notNullable().unsigned().references("id").inTable("users");
+  })
+  .createTable("item_request_items",function(table){
+      table.increments("id").notNullable().primary();
+      table.integer("item").notNullable().unsigned().references("id").inTable("items");
+      table.integer("document").notNullable().unsigned().references("id").inTable("item_requests");
+      table.decimal("unitprice",18,2).notNullable();
+      table.decimal("quantity",18,3).notNullable();
+      table.decimal("total",18,2).notNullable();
+      table.string("discount",20).nullable();
+      table.decimal("final",18,2).notNullable();
+  })
+  .createTable("invoice",function (table) {
+      table.increments("id").notNullable().primary();
+      table.string("type",20).notNullable();
+      table.date("date").notNullable();
+      table.integer("customer").unsigned().nullable().references("id").inTable("stakeholders");
+      table.decimal("creditamount",18,2).nullable();
+      table.integer("prevdoc").unsigned().nullable().references("id").inTable("item_requests");
+      table.decimal("total",18,2).notNullable();
+      table.string("discount",20).nullable();
+      table.decimal("final",18,2).notNullable();
+      table.text("remarks").nullable();
+      table.integer("user").unsigned().notNullable().references("id").inTable("users");
+  })
+  .createTable("invoice_items",function(table){
+      table.integer("item").unsigned().notNullable().references("id").inTable("items");
+      table.integer("document").unsigned().notNullable().references("id").inTable("invoice");
+      table.decimal("quantity",18,3).notNullable();
+      table.decimal("unit_price",18,2).notNullable();
+      table.string("discount",20).nullable();
+      table.decimal("total",18,2).notNullable();
+      table.decimal("final",18,2).notNullable();
+  })
+  .createTable("invoice_vat",function(table){
+      table.integer("invoice").unsigned().notNullable().references("id").inTable("invoice");
+      table.integer("vat").unsigned().notNullable().references("id").inTable("vats");
+  })
+  .createTable("inv_trans",function(table){
+      table.integer("transaction").unsigned().notNullable().references("id").inTable("transactions");
+      table.integer("invoice").unsigned().notNullable().references("id").inTable("invoice");
+      table.decimal("amount",18,2).notNullable();
+  })
+  .createTable("item_return_note",function(table){
+      table.increments("id").notNullable().primary();
+      table.date("return_date").notNullable();
+      table.string("reference",200);
+      table.integer("invoice").notNullable().unsigned().references("id").inTable("invoice");
+      table.decimal("returned_amount",18,2).notNullable();
+      table.text("reason");
+      table.date("date");
+      table.integer("user").unsigned().notNullable().references("id").inTable("users");
+  })
+  .createTable("item_return_items",function(table){
+      table.integer("item_id").notNullable().unsigned().references("id").inTable("items");
+      table.decimal("quantity",18,3).notNullable();
+      table.decimal("unit_price",18,2).notNullable();
+      table.decimal("total",18,2).notNullable();
+      table.string("discount",20).nullable();
+      table.decimal("final",18,2).notNullable();
+      table.integer("document").unsigned().references("id").inTable("item_return_note");
+  })
+  .createTable("advance_trans",function (table) {
+      table.integer("transid").unsigned().notNullable().references("id").inTable("transactions");
+      table.integer("advanceid").unsigned().notNullable().references("id").inTable("advances");
+      table.decimal("usedamount",18,2).notNullable();
+  })
+  .createTable("bin_card",function (table) {
+      table.increments("id").notNullable().primary();
+      table.date("date").notNullable();;
+      table.integer("item").unsigned().references("id").inTable("items");
+      table.decimal("in_quantity",18,3).notNullable().defaultTo(0.00);
+      table.decimal("in_up",18,2).notNullable().defaultTo(0.00);
+      table.decimal("in_total",18,2).notNullable().defaultTo(0.00);
+      table.decimal("out_quantity",18,3).notNullable().defaultTo(0.00);
+      table.decimal("out_up",18,2).notNullable().defaultTo(0.00);
+      table.decimal("out_total",18,2).notNullable().defaultTo(0.00);
+      table.string("type",10).notNullable();
+      table.integer("GRN").unsigned().nullable().references("id").inTable("grn");
+      table.integer("GREN").unsigned().nullable().references("id").inTable("grn_return_note");
+      table.integer("INV").unsigned().nullable().references("id").inTable("invoice");
+      table.integer("IRET").unsigned().nullable().references("id").inTable("item_return_note");
+      table.integer("STC").unsigned().nullable().references("id").inTable("stc_doc");
+  })
+  .createView("returned_grn_items_view",function(view){
+    view.as(knex(knex.raw("grn_return_note,grn_returned_items")).select("grn_return_note.grn as grn").select("grn_returned_items.item").sum("grn_returned_items.quantity as quantity").sum("grn_returned_items.unit_price as unit_price")
+    .sum("grn_returned_items.total as total").sum("grn_returned_items.final as final").select("grn_returned_items.discount").select("grn_returned_items.document").where("grn_return_note.id","=",knex.raw("grn_returned_items.document"))
+    .groupBy(["item","document"]));
+
+  })
+  .createView("returned_invoice_item_view",function(view){
+      view.as(knex(knex.raw("item_return_note,item_return_items")).select("item_return_items.item_id").select("item_return_items.document").select("item_return_note.invoice").sum("item_return_items.quantity as quantity")
+      .sum("item_return_items.unit_price as unit_price").sum("item_return_items.total as total").select("item_return_items.discount").sum("item_return_items.final as final").where("item_return_note.id","=",knex.raw("item_return_items.document")).groupBy(["item_return_items.item_id","item_return_items.document"]));
+  })
+  .createView("advance_complete_view",function(view){
+      view.as(knex(knex.raw("advances,stakeholders,transactions"))
+      .select("advances.*").select("stakeholders.name as stake_name").select("address1").select("address2").select("address3").select("email").select("telephone").select("type")
+      .select("cash").select("bank").select("cheque").select("bankid").select("chequeid")
+      .where("advances.trans_id","=",knex.raw("transactions.id")).where("advances.stake_id","=",knex.raw("stakeholders.id")))
+  })
+};
+
+/**
+ * @param { import("knex").Knex } knex
+ * @returns { Promise<void> }
+ */
+exports.down = function(knex) {
+  
+};

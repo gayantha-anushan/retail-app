@@ -1,0 +1,14 @@
+category,sub_category,code,name,description,unit,quantity,sale_price,unit_value,discount,status
+Laptop,Samsung,LAP-SAM-2,Samsung Laptop 2,"I9,12GEN,4GB VGA,16GB Ram,2TB HDD ,500GB SSD",Nos,5,300000,280000,8%,ACTIVE
+Mobile,Samsung,MOB-SAM-A10,A10 S,Sasung A10s imported Korea,Nos,10,20000,16000,5%,ACTIVE
+Mobile,Samsung,MOB-SAM-A20,A20S,Samsung A20S from North Korea,Nos,10,30000,28000,5%,ACTIVE
+Mobile,Samsung,MOB-SAM-A30,A30,Samsung A30 form South Korea,Nos,10,39000,35000,2%,ACTIVE
+Mobile,Samsung,MOB-SAM-A50,A50,Samsung A50 from South Korea,Nos,5,45000,40000,2%,ACTIVE
+Mobile,Apple,MOB-APP-12,Iphone 12,Original Iphone 12,Nos,10,120000,100000,,ACTIVE
+Mobile,Apple,MOB-APP-13,Iphone 13,Original Iphone 13,Nos,2,200000,180000,,ACTIVE
+printer,hitachi,PRI-HIT-1,Hitachi Printer 1.0,Hitachi Printer 1.0,Nos,10,15000,10000,5%,ACTIVE
+KEY,OS,KEY-OS-WIND10,Windows 10 Key,OEM,Keys,100,2000,1500,,ACTIVE
+KEY,GAME,KEY-GME-AC,Assasin Creed,Assasin Creed Game Key,Keys,100,5000,3500,,ACTIVE
+KEY,Security,KEY-SEC-KSP,kaspersky security key,kaspoersky security key 1PC,Keys,1000,2500,1500,,ACTIVE
+KEY,Security,KEY-SEC-AVA,Avast Key,Avasy Key,Keys,100,1800,1500,,ACTIVE
+Cool,Liquid,COO-LIQ-1,Cooling Liquid,Cooling liquid for PC liquid cooler,Liter,10,800,500,,ACTIVE
