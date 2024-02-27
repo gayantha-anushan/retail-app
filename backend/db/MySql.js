@@ -4,10 +4,11 @@ let _DBConnection;
 
 const connectDatabase = async () => {
     return mysql2.createConnection({
-        host:'localhost',
-        user:'root',
-        password:'gayanu.amb',
-        database:'pos8'
+      host:'34.121.0.150',
+      port:3306,
+      user:'demo-pos',
+      password:'pos@demo',
+      database:'pos-demo'
     })
 }
 

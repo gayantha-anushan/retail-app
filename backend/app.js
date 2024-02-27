@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(fileUpload())
 app.use(cookieParser())
 app.use(cors())
+app.set('trust proxy', true);
 
 var port = process.env.PORT || 3000;
 

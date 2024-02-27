@@ -11,11 +11,11 @@ module.exports = {
         //     database:'sql6475567'
         // },
         connection:{
-            host:'localhost',
+            host:'34.121.0.150',
             port:3306,
-            user:'root',
-            password:'gayanu.amb',
-            database:'pos8'
+            user:'demo-pos',
+            password:'pos@demo',
+            database:'pos-demo'
         },
         useNullAsDefault:true,
         migrations:{

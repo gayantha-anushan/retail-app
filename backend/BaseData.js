@@ -18,10 +18,11 @@ function getMysqlConfig(){
     //     database:'sql6475567'
     // }
     var conf = {
-        host:"localhost",
-        user:"root",
-        password:"gayanu.amb",
-        database:"pos8"
+        host:'34.121.0.150',
+        port:3306,
+        user:'demo-pos',
+        password:'pos@demo',
+        database:'pos-demo'
     }
     return conf;
 }
