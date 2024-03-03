@@ -11,11 +11,17 @@ var connectionPool = mysql2.createPool(BaseData.getMysqlConfig());
 //success and tested
 router.post('/login',async (req,res)=>{
     try{
-        var data = await LoginFunctions.Login(req.body.uname,req.body.pass);
-        res.status(200).send(data)
+        var data = await LoginFunctions.Login(req.body.username,req.body.password);
+        res.status(200).send({
+            isLoginSuccess:true,
+            token:data
+        })
     }catch(error){
         logger.error(error);
-        res.status(500).send()
+        res.status(200).send({
+            isLoginSuccess:false,
+            token:null
+        })
     }
 })
 

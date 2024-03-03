@@ -52,29 +52,6 @@ class LoginFunctions{
             }
         })
     }
-
-    // static Login(username,password){
-    //     return new Promise(async (resolve,reject)=>{
-    //         var auth_token = await this.createUniqueLoginID();
-    //         var sqls = "select * from users where username = ? and password=?";
-    //         try{
-    //             var connection = await connectionPool.getConnection();
-    //             var [result,fields] = await connection.execute(sqls,[username,Security.encrypt(password)])
-    //             if(result.length == 1){
-    //                 var quary = "insert into login_tokens (user_id,login_date,auth_token,status) values (?,?,?,?)"
-    //                 var data = await connection.execute(quary,[result[0].id,new Date().toISOString().slice(0,10),auth_token,'ONLINE'])
-    //                 data.token = auth_token;
-    //                 resolve(data);
-    //             }else{
-    //                 console.log(result)
-    //                 reject("Multiple Users Are Available")
-    //             }
-    //             connection.release()
-    //         }catch(error){
-    //             reject(error)
-    //         }
-    //     })
-    // }
     static Login(username,password){
         return new Promise(async (resolve,reject)=>{
             var sqls = "select * from users where username = ? and password=?";
@@ -94,22 +71,6 @@ class LoginFunctions{
             }
         })
     }
-    // static GetIDFromToken(token){
-    //     return new Promise(async (resolve,reject)=>{
-    //         try{
-    //             var connection = await connectionPool.getConnection();
-    //             var sqls = "select user_id from login_tokens where auth_token = ?"
-    //             var [result,fields] = await connection.execute(sqls,[token])
-    //             if(result.length == 1){
-    //                 resolve(result[0].user_id)
-    //             }else{
-    //                 reject({message:"Could not find user"})
-    //             }
-    //         }catch(error){
-    //             reject(error)
-    //         }
-    //     })
-    // }
     static GetIDFromToken(token){
         return new Promise(async (resolve,reject)=>{
             try{

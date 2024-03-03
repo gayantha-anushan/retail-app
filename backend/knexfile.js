@@ -15,7 +15,7 @@ module.exports = {
             port:3306,
             user:'demo-pos',
             password:'pos@demo',
-            database:'pos-demo'
+            database:'dev_db'
         },
         useNullAsDefault:true,
         migrations:{
