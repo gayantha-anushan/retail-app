@@ -1,5 +1,7 @@
 /backend/node_modules
 
 /frontend/node_modules
-/new-frontend/node_modules
+/new-backend/node_modules
+/pos-frontend/node_modules
+/posfrontendv2/node_modules
 /frontend/dist

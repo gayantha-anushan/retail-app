@@ -1,18 +1,28 @@
 <script setup>
 import LogoMine from '../assets/logo-mine.png'
+import Common from '@/services/Common';
 import { ref } from 'vue';
+import getMenuData from '@/data/MenuData';
 
 var isShowSidebar = ref(false);
+var currentPosMenu = ref([])
+
+currentPosMenu.value = getMenuData()
 
 function changeSidebar(){
     this.isShowSidebar = !this.isShowSidebar
     console.log(isShowSidebar)
 }
+
+function GetFilteredMenu(type){
+    var menu = getMenuData()
+    var filteredMenu = menu.filter(mn => mn.type == type)
+    currentPosMenu.value = filteredMenu
+    isShowSidebar.value = true
+}
 </script>
 
 <template>
-<!-- component -->
-<!-- This is an example component -->
 <div style="height: 100vh;" class=" bg-gray-50 dark:bg-gray-950">
    <nav class="bg-white border-b border-gray-200 dark:border-gray-800 fixed z-30 w-full dark:bg-gray-950 dark:text-white">
       <div class="px-3 py-3 lg:px-5 lg:pl-3">
@@ -63,44 +73,10 @@ function changeSidebar(){
                <div class="flex-1 px-3 bg-white dark:bg-gray-950 divide-y space-y-1">
                   <ul class="space-y-2 pb-2">
                      
-                     <li>
-                        <a href="#" class="text-base text-gray-900 dark:text-gray-50 font-normal rounded-lg dark:hover:bg-gray-900 hover:bg-gray-100 flex items-center p-2 group ">
-                           <svg class="w-6 h-6 text-gray-200 flex-shrink-0 group-hover:text-gray-900 dark:group-hover:text-gray-100 transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"></path>
-                           </svg>
-                           <span class="ml-3 flex-1 whitespace-nowrap">Sign In</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#" class="text-base text-gray-900 dark:text-gray-50 font-normal rounded-lg dark:hover:bg-gray-900 hover:bg-gray-100 flex items-center p-2 group ">
-                           <svg class="w-6 h-6 text-gray-200 flex-shrink-0 group-hover:text-gray-900 dark:group-hover:text-gray-100 transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"></path>
-                           </svg>
-                           <span class="ml-3 flex-1 whitespace-nowrap">Sign In</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#" class="text-base text-gray-900 dark:text-gray-50 font-normal rounded-lg dark:hover:bg-gray-900 hover:bg-gray-100 flex items-center p-2 group ">
-                           <svg class="w-6 h-6 text-gray-200 flex-shrink-0 group-hover:text-gray-900 dark:group-hover:text-gray-100 transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"></path>
-                           </svg>
-                           <span class="ml-3 flex-1 whitespace-nowrap">Sign In</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#" class="text-base text-gray-900 dark:text-gray-50 font-normal rounded-lg dark:hover:bg-gray-900 hover:bg-gray-100 flex items-center p-2 group ">
-                           <svg class="w-6 h-6 text-gray-200 flex-shrink-0 group-hover:text-gray-900 dark:group-hover:text-gray-100 transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"></path>
-                           </svg>
-                           <span class="ml-3 flex-1 whitespace-nowrap">Sign In</span>
-                        </a>
-                     </li>
-                     <li>
-                        <a href="#" class="text-base text-gray-900 dark:text-gray-50 font-normal rounded-lg dark:hover:bg-gray-900 hover:bg-gray-100 flex items-center p-2 group ">
-                           <svg class="w-6 h-6 text-gray-200 flex-shrink-0 group-hover:text-gray-900 dark:group-hover:text-gray-100 transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"></path>
-                           </svg>
-                           <span class="ml-3 flex-1 whitespace-nowrap">Sign In</span>
+                     <li v-for="mn in currentPosMenu" v-if="currentPosMenu.length > 0">
+                        <a :href="mn.url" class="text-base text-gray-900 dark:text-gray-50 font-normal rounded-lg dark:hover:bg-gray-900 hover:bg-gray-100 flex items-center p-2 group ">
+                           <!-- <div v-html="mn.icon"></div> -->
+                           <span class="ml-3 flex-1 whitespace-nowrap">{{  mn.name }}</span>
                         </a>
                      </li>
                      
@@ -119,45 +95,98 @@ function changeSidebar(){
 
                </div>
                <div class="mt-4 w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-                  <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
+                  <div v-on:click="GetFilteredMenu('CONF')" class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
                      <div class="flex items-center">
                         <div class="flex-shrink-0">
-                           <span class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">2,340</span>
-                           <h3 class="text-base font-normal text-gray-500">New products this week</h3>
+                           <span class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">Configurations</span>
+                           <h3 class="text-base font-normal text-gray-500">Click Here for Items Menu</h3>
                         </div>
                         <div class="ml-5 w-0 flex items-center justify-end flex-1 text-green-500 text-base font-bold">
-                           14.6%
-                           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" d="M5.293 7.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L6.707 7.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
-                           </svg>
+                           10
                         </div>
                      </div>
                   </div>
-                  <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
+
+                  <div v-on:click="GetFilteredMenu('BUY')" class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
                      <div class="flex items-center">
                         <div class="flex-shrink-0">
-                           <span class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">5,355</span>
-                           <h3 class="text-base font-normal text-gray-500">Visitors this week</h3>
+                           <span class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">Supplies</span>
+                           <h3 class="text-base font-normal text-gray-500">Click Here for Supplies Menu</h3>
                         </div>
                         <div class="ml-5 w-0 flex items-center justify-end flex-1 text-green-500 text-base font-bold">
-                           32.9%
-                           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" d="M5.293 7.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L6.707 7.707a1 1 0 01-1.414 0z" clip-rule="evenodd"></path>
-                           </svg>
+                           11
                         </div>
                      </div>
                   </div>
-                  <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
+
+                  <div v-on:click="GetFilteredMenu('SELL')" class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
                      <div class="flex items-center">
                         <div class="flex-shrink-0">
-                           <span class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">385</span>
-                           <h3 class="text-base font-normal text-gray-500">User signups this week</h3>
+                           <span class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">Sales</span>
+                           <h3 class="text-base font-normal text-gray-500">Click Here for Sales Menu</h3>
                         </div>
-                        <div class="ml-5 w-0 flex items-center justify-end flex-1 text-red-500 text-base font-bold">
-                           -2.7%
-                           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                              <path fill-rule="evenodd" d="M14.707 12.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l2.293-2.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                           </svg>
+                        <div class="ml-5 w-0 flex items-center justify-end flex-1 text-green-500 text-base font-bold">
+                           11
+                        </div>
+                     </div>
+                  </div>
+
+                  <div v-on:click="GetFilteredMenu('PAY')" class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
+                     <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                           <span class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">Payments</span>
+                           <h3 class="text-base font-normal text-gray-500">Click Here for Payments Menu</h3>
+                        </div>
+                        <div class="ml-5 w-0 flex items-center justify-end flex-1 text-green-500 text-base font-bold">
+                           11
+                        </div>
+                     </div>
+                  </div>
+
+                  <div v-on:click="GetFilteredMenu('STCR')" class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
+                     <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                           <span class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">Stock Report</span>
+                           <h3 class="text-base font-normal text-gray-500">Click Here for Stock Report Menu</h3>
+                        </div>
+                        <div class="ml-5 w-0 flex items-center justify-end flex-1 text-green-500 text-base font-bold">
+                           11
+                        </div>
+                     </div>
+                  </div>
+
+                  <div v-on:click="GetFilteredMenu('REP')" class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
+                     <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                           <span class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">Reports</span>
+                           <h3 class="text-base font-normal text-gray-500">Click Here for Reports Menu</h3>
+                        </div>
+                        <div class="ml-5 w-0 flex items-center justify-end flex-1 text-green-500 text-base font-bold">
+                           11
+                        </div>
+                     </div>
+                  </div>
+
+                  <div v-on:click="GetFilteredMenu('SET')" class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
+                     <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                           <span class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">Admin Settings</span>
+                           <h3 class="text-base font-normal text-gray-500">Click Here for Settings Menu</h3>
+                        </div>
+                        <div class="ml-5 w-0 flex items-center justify-end flex-1 text-green-500 text-base font-bold">
+                           11
+                        </div>
+                     </div>
+                  </div>
+
+                  <div v-on:click="GetFilteredMenu('PET')" class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
+                     <div class="flex items-center">
+                        <div class="flex-shrink-0">
+                           <span class="text-2xl sm:text-3xl leading-none font-bold text-gray-900">Petty Cash</span>
+                           <h3 class="text-base font-normal text-gray-500">Click Here for Petty Cash Book</h3>
+                        </div>
+                        <div class="ml-5 w-0 flex items-center justify-end flex-1 text-green-500 text-base font-bold">
+                           11
                         </div>
                      </div>
                   </div>

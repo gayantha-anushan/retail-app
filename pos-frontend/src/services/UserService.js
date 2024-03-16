@@ -1,12 +1,12 @@
 import axios from 'axios';
 
-const url = "/api/users";
+const url = "http://localhost:3000/api/users";
 
 class UserService{
     static async login(uname,pass){
         return new Promise((resolve,reject)=>{
             try{
-                axios.post(url+'/login',{uname:uname,pass:pass}).then((res)=>{
+                axios.post(url+'/login',{username:uname,password:pass}).then((res)=>{
                     const data = res.data;
                     resolve(data)
                 })
