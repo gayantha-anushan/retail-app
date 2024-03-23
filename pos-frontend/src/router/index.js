@@ -18,7 +18,7 @@ const router = createRouter({
       name:'Dashboard',
       component:DashboardView
     },{
-      path:'/',
+      path:'/categories',
       name:'Categories',
       component:Categories
     },{

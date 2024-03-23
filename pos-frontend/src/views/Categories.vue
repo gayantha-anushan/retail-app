@@ -4,33 +4,6 @@ import LogoMine from '../assets/logo-mine.png'
 import { ref } from 'vue';
 import router from '@/router';
 
-
-var formStructure = ref([
-    {
-        title:"ID",
-        field:"id"
-    },{
-        title:"Name",
-        field:"name"
-    },{
-        title:"Address",
-        field:"address"
-    }
-])
-var content = ref([
-    {
-        id:11223,
-        name:"Pretty Cat",
-        address:"2022/1,Main St, London"
-    }
-])
-
-var tbConfig = ref({
-    isContentDeleteButton:true,
-    isContentEditButton:true,
-    isContentViewButton:true
-})
-
 function NavigateToDashboard(){
     router.push('/dashboard')
 }
@@ -88,7 +61,11 @@ function NavigateToDashboard(){
                         <input type="search"name="search" placeholder="search" class=" w-full border-none bg-transparent px-4 py-1 text-gray-900 outline-none focus:outline-none"/>
                      </form>
                   </div>
-                  <Grid :FormStructure="formStructure" :content="content" :TbConfig="tbConfig" />
+                  <!-- <Grid :FormStructure="formStructure" :content="content" :TbConfig="tbConfig" /> -->
+                  <div>
+                     <p>Category title</p>
+                     <button>Types</button>
+                  </div>
                </div>
                <div>
                   <div class=" flex justify-between items-center ps-2 pe-2">
@@ -97,7 +74,10 @@ function NavigateToDashboard(){
                         <input type="search"name="search" placeholder="search" class=" w-full border-none bg-transparent px-4 py-1 text-gray-900 outline-none focus:outline-none"/>
                      </form>
                   </div>
-                  <Grid :FormStructure="formStructure" :content="content" :TbConfig="tbConfig" />
+                  <!-- <Grid :FormStructure="formStructure" :content="content" :TbConfig="tbConfig" /> -->
+                  <div>
+                     <p>type title</p>
+                  </div>
                </div>
             </div>
             

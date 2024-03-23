@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const url = "/api/items"
+const url = "http://localhost:3000/api/items"
 
 class ItemService{
     static InsertCategory(name){
