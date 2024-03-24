@@ -4,6 +4,7 @@ import DashboardView from '@/views/DashboardView.vue'
 import Categories from '@/views/Categories.vue'
 import Items from '@/views/Items.vue'
 import Stakeholders from '@/views/Stakeholders.vue'
+import AdminSettings from '@/views/AdminSettings.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -30,6 +31,11 @@ const router = createRouter({
       path:'/stake/:code', // Add the parameter ":code" to the path
       name:"stakeholder",
       component:Stakeholders
+    },
+    {
+      path:'/Settings',
+      name:'Settings',
+      component:AdminSettings
     }
   ]
 })

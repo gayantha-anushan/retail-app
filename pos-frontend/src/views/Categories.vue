@@ -3,10 +3,61 @@ import Grid from '@/components/Grid.vue';
 import LogoMine from '../assets/logo-mine.png'
 import { ref } from 'vue';
 import router from '@/router';
+import ItemService from '@/services/ItemService';
 
 function NavigateToDashboard(){
     router.push('/dashboard')
 }
+
+var categoryText = ref("")
+var typeText = ref("")
+var categories = ref([])
+var types = ref([])
+var selectedCategory = ref(0)
+
+RefreshCategories();
+
+function RefreshCategories(){
+   ItemService.GETCategoriesWithNumType().then(value => {
+      categories.value = value
+      console.log(value)
+   }).catch(error => {
+      console.log(error)
+   })
+}
+
+function RefreshTypes(selectedCat){
+   ItemService.typesofcategory(selectedCat).then(value=>{
+      types.value = value
+      console.log(value)
+   }).catch(error=>{
+      console.log(error)
+   })
+}
+
+function CreateType(){
+   ItemService.InsertType(selectedCategory.value,typeText.value).then(()=>{
+      RefreshTypes(selectedCategory.value)
+      typeText.value = ""
+   }).catch((error)=>{
+      console.log(error)
+   })
+}
+
+function SelectCategory(id){
+   RefreshTypes(id)
+   selectedCategory.value = id
+}
+
+function CreateCategories(){
+   if(categoryText.value.length > 1){
+      ItemService.InsertCategory(categoryText.value).then(()=>{
+         RefreshCategories()
+         categoryText.value = ""
+      })
+   }
+}
+
 
 </script>
 
@@ -53,30 +104,32 @@ function NavigateToDashboard(){
       <div id="main-content" class="h-full w-full bg-gray-50 dark:bg-gray-950 relative overflow-y-auto " >
          <main  class="text-black dark:text-white">
             
-            <div class=" grid grid-cols-2 gap-10">
+            <div class=" grid grid-cols-1 md:grid-cols-2 gap-10">
                <div>
                   <div class=" flex justify-between items-center ps-2 pe-2">
                      <p class=" text-black dark:text-white text-xl font-bold" >Categories</p>
-                     <form class=" flex w-96 rounded bg-white mt-2"> 
-                        <input type="search"name="search" placeholder="search" class=" w-full border-none bg-transparent px-4 py-1 text-gray-900 outline-none focus:outline-none"/>
-                     </form>
+                     <div class=" flex w-96 rounded bg-white mt-2"> 
+                        <input type="search" v-model="categoryText" name="search" placeholder="search" class=" w-full border-none bg-transparent px-4 py-1 text-gray-900 outline-none focus:outline-none"/>
+                        <button v-on:click="CreateCategories()" class="bg-indigo-500 px-2 rounded-tr rounded-br">Add</button>
+                     </div>
                   </div>
                   <!-- <Grid :FormStructure="formStructure" :content="content" :TbConfig="tbConfig" /> -->
-                  <div>
-                     <p>Category title</p>
-                     <button>Types</button>
+                  <div v-for="ct in categories" class="flex justify-between items-center p-3 m-3 bg-gray-400 dark:bg-gray-600 rounded-md">
+                     <p>{{ ct.name }}</p>
+                     <button v-on:click="SelectCategory(ct.id)" class="bg-gray-600 dark:bg-gray-400 p-2 rounded-md ">Show Types</button>
                   </div>
                </div>
                <div>
                   <div class=" flex justify-between items-center ps-2 pe-2">
                      <p class=" text-black dark:text-white text-xl font-bold" >Types</p>
-                     <form class=" flex w-96 rounded bg-white mt-2"> 
-                        <input type="search"name="search" placeholder="search" class=" w-full border-none bg-transparent px-4 py-1 text-gray-900 outline-none focus:outline-none"/>
-                     </form>
+                     <div class=" flex w-96 rounded bg-white mt-2"> 
+                        <input v-model="typeText" type="search"name="search" placeholder="search" class=" w-full border-none bg-transparent px-4 py-1 text-gray-900 outline-none focus:outline-none"/>
+                        <button v-on:click="CreateType()" class="bg-indigo-500 px-2 rounded-tr rounded-br">Add</button>
+                     </div>
                   </div>
                   <!-- <Grid :FormStructure="formStructure" :content="content" :TbConfig="tbConfig" /> -->
-                  <div>
-                     <p>type title</p>
+                  <div v-for="tp in types" class="flex justify-between items-center p-3 m-3 bg-gray-400 dark:bg-gray-600 rounded-md">
+                     <p>{{tp.name}}</p>
                   </div>
                </div>
             </div>

@@ -1664,3 +1664,73 @@ error [Sun Mar 10 2024 10:37:19 GMT+0530 (India Standard Time)]  TypeError [ERR_
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Sun Mar 24 2024 15:07:07 GMT+0530 (India Standard Time)]  TypeError [ERR_INVALID_ARG_TYPE]: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
+    at new NodeError (node:internal/errors:405:5)
+    at Cipher.update (node:internal/crypto/cipher:182:11)
+    at Object.encrypt (D:\samitha-app\retail-app\backend\Security.js:8:23)
+    at D:\samitha-app\retail-app\backend\functions\LoginFunctions.js:60:88
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  code: 'ERR_INVALID_ARG_TYPE'
+}
+error [Sun Mar 24 2024 15:07:09 GMT+0530 (India Standard Time)]  JsonWebTokenError: jwt malformed
+    at module.exports [as verify] (D:\samitha-app\retail-app\backend\node_modules\jsonwebtoken\verify.js:70:17)
+    at D:\samitha-app\retail-app\backend\functions\LoginFunctions.js:77:35
+    at new Promise (<anonymous>)
+    at LoginFunctions.GetIDFromToken (D:\samitha-app\retail-app\backend\functions\LoginFunctions.js:75:16)
+    at D:\samitha-app\retail-app\backend\routes\UserRoute.js:42:39
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+error [Sun Mar 24 2024 15:07:09 GMT+0530 (India Standard Time)]  JsonWebTokenError: jwt malformed
+    at module.exports [as verify] (D:\samitha-app\retail-app\backend\node_modules\jsonwebtoken\verify.js:70:17)
+    at D:\samitha-app\retail-app\backend\functions\LoginFunctions.js:77:35
+    at new Promise (<anonymous>)
+    at LoginFunctions.GetIDFromToken (D:\samitha-app\retail-app\backend\functions\LoginFunctions.js:75:16)
+    at D:\samitha-app\retail-app\backend\routes\UserRoute.js:140:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+error [Sun Mar 24 2024 15:07:12 GMT+0530 (India Standard Time)]  TypeError [ERR_INVALID_ARG_TYPE]: The "data" argument must be of type string or an instance of Buffer, TypedArray, or DataView. Received undefined
+    at new NodeError (node:internal/errors:405:5)
+    at Cipher.update (node:internal/crypto/cipher:182:11)
+    at Object.encrypt (D:\samitha-app\retail-app\backend\Security.js:8:23)
+    at D:\samitha-app\retail-app\backend\functions\LoginFunctions.js:60:88
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) {
+  code: 'ERR_INVALID_ARG_TYPE'
+}
+error [Sun Mar 24 2024 15:07:13 GMT+0530 (India Standard Time)]  JsonWebTokenError: jwt malformed
+    at module.exports [as verify] (D:\samitha-app\retail-app\backend\node_modules\jsonwebtoken\verify.js:70:17)
+    at D:\samitha-app\retail-app\backend\functions\LoginFunctions.js:77:35
+    at new Promise (<anonymous>)
+    at LoginFunctions.GetIDFromToken (D:\samitha-app\retail-app\backend\functions\LoginFunctions.js:75:16)
+    at D:\samitha-app\retail-app\backend\routes\UserRoute.js:140:40
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+error [Sun Mar 24 2024 15:07:13 GMT+0530 (India Standard Time)]  JsonWebTokenError: jwt malformed
+    at module.exports [as verify] (D:\samitha-app\retail-app\backend\node_modules\jsonwebtoken\verify.js:70:17)
+    at D:\samitha-app\retail-app\backend\functions\LoginFunctions.js:77:35
+    at new Promise (<anonymous>)
+    at LoginFunctions.GetIDFromToken (D:\samitha-app\retail-app\backend\functions\LoginFunctions.js:75:16)
+    at D:\samitha-app\retail-app\backend\routes\UserRoute.js:42:39
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
