@@ -1734,3 +1734,36 @@ error [Sun Mar 24 2024 15:07:13 GMT+0530 (India Standard Time)]  JsonWebTokenErr
     at LoginFunctions.GetIDFromToken (D:\samitha-app\retail-app\backend\functions\LoginFunctions.js:75:16)
     at D:\samitha-app\retail-app\backend\routes\UserRoute.js:42:39
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+error [Tue Mar 26 2024 22:48:46 GMT+0530 (India Standard Time)]  Multiple Users Are Available
+error [Tue Mar 26 2024 22:48:47 GMT+0530 (India Standard Time)]  Multiple Users Are Available
+error [Tue Mar 26 2024 22:49:23 GMT+0530 (India Standard Time)]  Multiple Users Are Available
+error [Tue Mar 26 2024 22:49:47 GMT+0530 (India Standard Time)]  Multiple Users Are Available
+error [Tue Mar 26 2024 22:50:17 GMT+0530 (India Standard Time)]  Multiple Users Are Available
+error [Tue Mar 26 2024 22:50:53 GMT+0530 (India Standard Time)]  Multiple Users Are Available
+error [Tue Mar 26 2024 22:57:30 GMT+0530 (India Standard Time)]  Multiple Users Are Available
